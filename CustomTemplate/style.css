@@ -1,0 +1,41 @@
+body{
+    font-family: sans-serif;
+    border: 1px solid grey;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+.template-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: #80A1FD;
+    height: 100vh;
+    width: 100vw;
+}
+
+.template-wrapper h1{
+    color: white;
+}
+.template-wrapper h3{
+    margin: 30px;
+}
+
+.template-info-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-transform: capitalize;
+    width: 100%;
+    background: white;
+}
+
+.template-btn{
+    display: block;
+    outline: none;
+    padding: 10px;
+    background: #e4e4e4;
+    border: 1px solid;
+}
