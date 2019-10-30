@@ -12,6 +12,10 @@ window.addEventListener("message", (event) => {
     emailConfirmedEl.innerHTML = `Email is confirmed: ${emailConfirmed}`;
 });
 
-function getUserData() {
-    window.parent.postMessage("getUser", "*");
+function callIOS() {
+    const obj = {
+        method: "console",
+        message: "Hello World!"
+    };
+    window.parent.postMessage(JSON.stringify(obj), "*");
 }

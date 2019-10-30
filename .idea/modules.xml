@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/behive-actions.iml" filepath="$PROJECT_DIR$/.idea/behive-actions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/actions.iml" filepath="$PROJECT_DIR$/.idea/actions.iml" />
     </modules>
   </component>
 </project>
