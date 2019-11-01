@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Custom template</title>
-    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1">
+    <link href="./style.css" rel="stylesheet">
+    <script src="./coreJS.js"></script>
     <script src="./CustomTemplate.js"></script>
 </head>
 <body>
 
 <div class="template-wrapper">
-   <button onclick="callIOS()">Get info from js</button>
+    <div><span id="event-name">iOS Event Name: </span></div>
+    <input id="input" type="text">
+    <button onclick="createJob()">Create Job</button>
 </div>
 
 </body>

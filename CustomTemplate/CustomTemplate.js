@@ -1,21 +1,19 @@
-window.addEventListener("message", (event) => {
-    let userNameEl = document.querySelector("#username");
-    let emailEl = document.querySelector("#email");
-    let emailConfirmedEl = document.querySelector("#emailConfirmed");
+function createJob() {
+    const inputValue = document.querySelector("#input").value;
 
-    const parsedData = JSON.parse(event.data);
-    const { data } = parsedData;
-    const { email, username, emailConfirmed } = data;
+    const data = {
+        eventName: "create-job",
+        data: {
+            templateId: 1,
+            title: "Create job",
+            inputValue
+        }
+    };
+    coreJs.sendDataToPartner(data);
+}
 
-    userNameEl.innerHTML = `Username: ${username}`;
-    emailEl.innerHTML = `Email: ${email}`;
-    emailConfirmedEl.innerHTML = `Email is confirmed: ${emailConfirmed}`;
+window.addEventListener("from-ios", (event) => {
+    const textField = document.querySelector("#event-name");
+    textField.innerHTML = `iOS event name: ${event.detail.eventName}`
 });
 
-function callIOS() {
-    const obj = {
-        method: "console",
-        message: "Hello World!"
-    };
-    window.parent.postMessage(JSON.stringify(obj), "*");
-}

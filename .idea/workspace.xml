@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f65e6ff0-3ba6-4e21-b4a7-5ba9e6a7cca6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/behive-actions.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CustomTemplate/CustomTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/CustomTemplate/CustomTemplate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CustomTemplate/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/CustomTemplate/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coreJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/CustomTemplate/coreJS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainStyles.css" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +38,11 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CustomTemplate" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -63,7 +67,7 @@
       <updated>1571382143851</updated>
       <workItem from="1571382145112" duration="12720000" />
       <workItem from="1571430749574" duration="345000" />
-      <workItem from="1572436447819" duration="4732000" />
+      <workItem from="1572436447819" duration="13602000" />
     </task>
     <servers />
   </component>

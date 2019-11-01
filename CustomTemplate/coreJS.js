@@ -1,11 +1,5 @@
-( function () {
+const coreJs = ( function () {
     let iOSBridge;
-
-    // Send data to child iframe
-    function sendDataToTemplate(data) {
-        const iframeEl = document.getElementById("iframe");
-        iframeEl.contentWindow.dataObject = data;
-    }
 
     // Subscribe to iOS events
     ( function setupWebViewJavascriptBridge(callback) {
@@ -26,24 +20,26 @@
     } )(
         function (bridge) {
             iOSBridge = bridge;
+            // Send event to JS from iOS
+            bridge.registerHandler("eventToJS", function (data, responseCallback) {
+                const {eventName} = data;
+                const eventToSend = new CustomEvent(`${eventName}`, { detail: data });
+                dispatchEvent(eventToSend);
 
-
-            // Event fired in JS
-            bridge.registerHandler("JS Echo", function (data, responseCallback) {
+                // TODO: Handle error
                 console.log("JS Echo called with:", data);
                 responseCallback(data);
             });
         }
     );
 
-    // Invoke calback in iOS
-    (function () {
-        window.addEventListener("message", (event) => {
-            let json = JSON.parse(event.data);
-            iOSBridge.callHandler("ObjC Echo", json.message, function responseCallback(responseData) {
+    return {
+        // Send event to iOS from JS
+        sendDataToPartner: function (data) {
+            iOSBridge.callHandler("eventToiOS", data, function responseCallback(responseData) {
+                // TODO: Handle error
                 console.log("JS received response:", responseData);
             });
-        });
-    })();
-
+        }
+    };
 } )();
