@@ -27,7 +27,7 @@ const coreJs = ( function () {
                 dispatchEvent(eventToSend);
 
                 // TODO: Handle error
-                console.log("JS Echo called with:", data);
+                console.log("Data from iOS", data);
                 responseCallback(data);
             });
         }
@@ -38,7 +38,7 @@ const coreJs = ( function () {
         sendDataToPartner: function (data) {
             iOSBridge.callHandler("eventToiOS", data, function responseCallback(responseData) {
                 // TODO: Handle error
-                console.log("JS received response:", responseData);
+                console.log("Data to iOS:", responseData);
             });
         }
     };
